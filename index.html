@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---------------------------------CSS links----------------------------------->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="hero">
+        <div class="modal-box" id="modal-box">
+            <p id="modal-text"></p>
+        </div><!--end password modal-->
+        <main class="container">
+            <h1>Password generator</h1>
+            <div class="password-box">
+                <div>
+                    <p>Password length: <span id="length"></span></p>
+                    <i class="bx bx-copy-alt" id="copy-password" title="Copy password"></i>
+                </div>
+                <p id="info"></p>
+            </div><!--end password box-->
+            <div class="range-box">
+                <input type="range" min="8" max="32" value="16" id="range">
+                <span id="counter"></span>
+            </div><!--end range box-->
+            <div class="settings-box">
+                <h2>Settings</h2>
+                <div class="settings">
+                    <div>
+                        <label for="lowercase">Include lowercase:</label>
+                        <input type="checkbox" id="lowercase" checked>
+                    </div>
+                    <div>
+                        <label for="uppercase">Include uppercase:</label>
+                        <input type="checkbox" id="uppercase" checked>
+                    </div>
+                    <div>
+                        <label for="numbers">Include numbers:</label>
+                        <input type="checkbox" id="numbers" checked>
+                    </div>
+                    <div>
+                        <label for="symbols">Include symbols:</label>
+                        <input type="checkbox" id="symbols" checked>
+                    </div>
+                </div><!--end settings-->
+            </div><!--end settings box-->
+            <button type="button" id="generate-button">Generate password</button>
+        </main><!--end container-->
+    </section><!--end hero-->
+    <!---------------------------------JavaScript link----------------------------------->
+    <script src="js/app.js"></script>
+</body>
+</html>

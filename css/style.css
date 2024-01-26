@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", Arial, Helvetica, sans-serif;
+    outline: none;
+    border: none;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #2a2a58;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+}
+
+.modal-box {
+    position: absolute;
+    top: -80px;
+    background-color: #0e0e1f;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    transition: top 0.5s ease;
+}
+.modal-box.open {
+    top: 0;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    background-color: #0e0e1f;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.container h1 {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: left;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+
+.password-box {
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.password-box div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.password-box div p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.password-box div i {
+    display: inline-flex;
+    align-self: flex-end;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.password-box #info {
+    width: 100%;
+    background-color: #191933;
+    padding: 13px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    word-break: break-all;
+    letter-spacing: 0.25px;
+}
+
+.range-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.range-box input {
+    flex: 0.85;
+    max-width: 160px;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 6px;
+    border-radius: 20px;
+}
+
+.range-box input::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 14px;
+    height: 14px;
+    background-color: #0ccc0c;
+    border-radius: 50%;
+    cursor: grab;
+    box-shadow: 0 0 5px #0ccc0c;
+}
+.range-box input.drag::-webkit-slider-thumb {
+    cursor: grabbing;
+}
+
+.range-box input::-moz-range-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 14px;
+    height: 14px;
+    background-color: #0ccc0c;
+    border-radius: 50%;
+    cursor: grab;
+    box-shadow: 0 0 5px #0ccc0c;
+}
+.range-box input.drag::-moz-range-thumb {
+    cursor: grabbing;
+}
+
+.range-box span {
+    flex: 0.15;
+    width: 100%;
+    background-color: #663399;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 3px 0;
+    letter-spacing: 1px;
+}
+
+.settings-box {
+    margin: 20px 0;
+}
+
+.settings-box h2 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.settings-box .settings div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.settings-box .settings div:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.settings-box .settings div label {
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.settings-box .settings div input {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #0ccc0c;
+    cursor: pointer;
+}
+
+.settings-box .settings div input::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 5px;
+    height: 10px;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    display: none;
+}
+
+.settings-box .settings div input:checked::after {
+    display: block;
+}
+
+.container button {
+    display: block;
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+    background-color: #663399;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
